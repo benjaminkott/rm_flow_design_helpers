@@ -98,7 +98,7 @@ private
   def outputProjectsRecursively (project, rootline, level, inSelectTag = false)
     out = ''
     
-    projects = Project.find(:all, :order => "sorting, name", :conditions => [Project.visible_by(User.current) + " AND parent_id = ?", project.id])
+    projects = Project.find(:all, :order => "sorting, name", :conditions => [Project.visible_condition(User.current) + " AND parent_id = ?", project.id])
     
     if (inSelectTag || ( level == 2 && projects.length > 20 ) ) then
 	if (level == 2) then
