@@ -1,6 +1,4 @@
 module MenuGeneratorHelper
-  
-
   def left_menu_tabs
     tabs = [ { :name => 'menu', :label => 'Menu', :partial => 'left_menu/menu.rhtml' },
 	     { :name => 'actions', :label => 'Actions', :partial => 'left_menu/actions.rhtml' } ]
