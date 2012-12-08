@@ -102,7 +102,7 @@ private
     
     if (inSelectTag || ( level == 2 && projects.length > 20 ) ) then
 	if (level == 2) then
-	    out += '<select onchange="window.location.href=\'/projects/show/\'+this.value"><option value="extensions">- Select Subproject-</option>'
+	    out += '<select onchange="window.location.href=\'/projects/\'+this.value"><option value="extensions">- Select Subproject-</option>'
 	end
 	projects.each { |prj|
 	    select = ''
