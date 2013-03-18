@@ -6,6 +6,6 @@ require 'dispatcher'
 
 Dispatcher.to_prepare do
   ApplicationController.helper(MenuGeneratorHelper)
-  Project.safe_attributes 'topbarbackgroundcolor', 'topbarheaderimage'
+  Project.safe_attributes 'topbarbackgroundcolor', 'topbartextcolor', 'topbarheaderimage'
 end
 
