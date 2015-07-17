@@ -59,7 +59,7 @@
     </div>
     
     <div id="main-menu">
-        <%= text_field_with_auto_complete :projectname, :project, { :class => 'projectsearch placeholder', :value => 'Project title search', :onfocus => 'this.value = ""; $(this).removeClassName("placeholder");'}, {:url => { :controller => :start, :action => :auto_complete_for_project_name }, :skip_style => true, :after_update_element => 'function(element, value) { var identNode = $(value).select(".identifier"); window.location.href="/projects/show/"+identNode[0].innerHTML }' } %>
+        <%= text_field_with_auto_complete :projectname, :project, { :class => 'projectsearch placeholder', :value => 'Project title search', :onfocus => 'this.value = ""; $(this).removeClassName("placeholder");'}, {:url => { :controller => :start, :action => :auto_complete_for_project_name }, :skip_style => true, :after_update_element => 'function(element, value) { var identNode = $(value).select(".identifier"); window.location.href="/projects/"+identNode[0].innerHTML }' } %>
         <%= render_main_menu(@project) %>
     </div>
 </div>
