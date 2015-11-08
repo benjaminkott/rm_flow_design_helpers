@@ -45,7 +45,7 @@ module MenuGeneratorHelper
     if (identifier == 'start') then
       htmlOptions[:class] += ' current'
     end
-    out += link_to "Start", {:controller => 'start', :action => 'index'}, htmlOptions
+    #out += link_to "Start", {:controller => 'start', :action => 'index'}, htmlOptions
 
     # Display Subprojects
     Project.find(:all, :conditions => 'parent_id IS NULL', :order => :sorting).each { |prj|
